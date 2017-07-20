@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Disraptor</title>
-</head>
-<body>
-  <div style='text-align: center;'>
-    <h1>Disraptor</h1>
-    <img src="static/images/raptor.jpg">
-    <p>Disraptor implementiert ein "soziales Frontend" für Web-Apps. Sämtliches Nutzermanagement sowie Möglichkeiten für soziale Interaktionen der Nutzer untereinander werden von Disraptor bereitgestellt. Interaktion mit der App hingegen werden direkt an den App-Server im Backend weitergeleitet: Da die Nutzer vom Frontend bereits authentisiert wurden, muss die App solche Funktionen nicht mehr selbst implementieren, was die App-Entwicklung drastisch erleichtert. Disraptor entkoppelt die sozialen Funktionen sowie das Nutzermanagement vollkommen von der App.</p>
-  </div>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>disraptor</title>
+    <meta name="description" content="Web presence of Disraptor">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="/src/disraptor-app/disraptor-app.html">
+
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body>
+    <disraptor-app></disraptor-app>
+  
+
+</body></html>

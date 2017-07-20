@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer-bootstrap/polymer-bootstrap.html">
+<link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+
+<dom-module id="disraptor-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <paper-header-panel class="flex">
+      <paper-toolbar slot="header">
+        <h1>Disraptor</h1>
+      </paper-toolbar>
+      <div>
+      </div>
+    </paper-header-panel>
+    <iron-image src="/static/images/raptor.jpg"></iron-image>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class DisraptorApp extends Polymer.Element {
+      static get is() { return 'disraptor-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'disraptor-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(DisraptorApp.is, DisraptorApp);
+  </script>
+</dom-module>
