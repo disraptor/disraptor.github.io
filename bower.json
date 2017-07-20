@@ -1,0 +1,16 @@
+{
+  "name": "disraptor",
+  "description": "Web presence of Disraptor",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "paper-header-panel": "PolymerElements/paper-header-panel#^2.0.0",
+    "polymer-bootstrap": "^0.1.2",
+    "bootstrap": "^3.3.7",
+    "iron-image": "PolymerElements/iron-image#^2.1.2"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}
