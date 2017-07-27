@@ -1,0 +1,35 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+<dom-module id="disraptor-header">
+  <template>
+    <style>
+
+    </style>
+    <paper-header-panel class="flex">
+      <paper-toolbar slot="header">
+        <a href="/"><h1>Disraptor</h1></a>
+      </paper-toolbar>
+      <div>
+      </div>
+    </paper-header-panel>
+  </template>
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class DisraptorHeader extends Polymer.Element {
+      static get is() { return 'disraptor-header'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'disraptor-header'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(DisraptorHeader.is, DisraptorHeader);
+  </script>
+</dom-module>
