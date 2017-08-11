@@ -1,13 +1,12 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../bower_components/polymer-bootstrap/polymer-bootstrap.html">
 <link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
 <link rel="import" href="../../bower_components/iron-image/iron-image.html">
 <link rel="import" href="/src/disraptor-app/disraptor-header.html">
 <link rel="lazy-import" href="second-view.html">
 
 <dom-module id="disraptor-app">
-  <link rel="import" type="css" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
   <template>
+    <style include="granite-bootstrap"></style>
     <style>
       :host {
         display: block;
@@ -26,7 +25,7 @@
         Disraptor implementiert ein "soziales Frontend" für Web-Apps. Sämtliches Nutzermanagement sowie Möglichkeiten für soziale Interaktionen der Nutzer untereinander werden von Disraptor bereitgestellt. Interaktion mit der App hingegen werden direkt an den App-Server im Backend weitergeleitet: Da die Nutzer vom Frontend bereits authentisiert wurden, muss die App solche Funktionen nicht mehr selbst implementieren, was die App-Entwicklung drastisch erleichtert. Disraptor entkoppelt die sozialen Funktionen sowie das Nutzermanagement vollkommen von der App.<br>
         Die sozialen Funktionen und das Nutzermanagement von Disraptor werden nicht von Grund auf neu entwickelt. Stattdessen baut Disraptor auf Discourse auf, einem von Jeff Atwood (dem Gründer von StackOverflow) ins Leben gerufenen Diskussionsforensoftware, die gegenwärtig großen Zulauf findet. Anstatt aber lediglich ein Forum anzubieten, wie es bei Discourse der Fall ist, verschiebt Disraptor die Diskussionsfunktionen auf vom App-Entwickler konfigurierbare Unterseiten und erlaubt es so auf der Startseite sowie beliebigen anderen Pfaden die eigene Web-App zu integrieren. Somit wird die erste Proof-of-Concept-Entwicklung von Disraptor mit vertretbarem Aufwand realisierbar und erhöht den Wiedererkennungswert für die späteren Nutzer so vorgestellter Apps.
       <p></p>
-      <a href="second-view">Testlink</a>
+      <a href="second-view">Testlink</a><br>
     </div>
     <iron-image src="/static/images/raptor.jpg"></iron-image>
   </template>
@@ -48,6 +47,6 @@
       }
     }
 
-    window.customElements.define(DisraptorApp.is, DisraptorApp);
+    customElements.define(DisraptorApp.is, DisraptorApp);
   </script>
 </dom-module>

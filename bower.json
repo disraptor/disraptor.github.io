@@ -5,8 +5,6 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
     "paper-header-panel": "PolymerElements/paper-header-panel#^2.0.0",
-    "polymer-bootstrap": "^0.1.2",
-    "bootstrap": "^3.3.7",
     "iron-image": "PolymerElements/iron-image#^2.1.2"
   },
   "devDependencies": {
