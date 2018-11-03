@@ -27,13 +27,17 @@
 
     <a href="/"><h1>Disraptor</h1></a>
 
-    <h2>Soziales Frontend für Schnelle Web-App-Entwicklung</h2>
+    <p>Disraptor is a <a href="https://www.discourse.org/">Discourse</a> plugin with the goal of separating web application development from the development of other, often crucial features like user management, authentication, mailing, social networking, etc.</p>
 
-    <p>Eine neue Web-App zu entwickeln beinhaltet zahlreiche Aufgaben, die meist nichts mit ihrer eigentlichen Funktion zu tun haben: Nutzermanagement, Authentisierung, Mailversand, soziales Netzwerk, Diskussionsforum, etc. Die Implementierung dieser Komponenten erfordert viel Zeit und lenkt vom eigentlichen Dienst ab. Das trifft insbesondere Einzelkämpfer und kleine Gruppen, die mit wenig Aufwand und Ressourcen etwas bewegen wollen, aber auch Start-ups in der Frühphase, die ihre App möglichst schnell veröffentlichen wollen. Überraschenderweise gibt es bislang kein Werkzeug, das die oben genannten Funktionen schlüsselfertig integriert, so dass man nur noch seine App einbauen muss. Disraptor füllt diese Lücke erstmals.</p>
+    <h2>Core principle</h2>
 
-    <p>Disraptor implementiert ein "soziales Frontend" für Web-Apps. Sämtliches Nutzermanagement sowie Möglichkeiten für soziale Interaktionen der Nutzer untereinander werden von Disraptor bereitgestellt. Interaktion mit der App hingegen werden direkt an den App-Server im Backend weitergeleitet: Da die Nutzer vom Frontend bereits authentisiert wurden, muss die App solche Funktionen nicht mehr selbst implementieren, was die App-Entwicklung drastisch erleichtert. Disraptor entkoppelt die sozialen Funktionen sowie das Nutzermanagement vollkommen von der App.</p>
+    <p>Disraptor acts as a proxy for the actual web application. Users set up routes mapping from the Discourse instance to the web application server via Disraptor’s plugin page.</p>
 
-    <p>Die sozialen Funktionen und das Nutzermanagement von Disraptor werden nicht von Grund auf neu entwickelt. Stattdessen baut Disraptor auf Discourse auf, einem von Jeff Atwood (dem Gründer von StackOverflow) ins Leben gerufenen Diskussionsforensoftware, die gegenwärtig großen Zulauf findet. Anstatt aber lediglich ein Forum anzubieten, wie es bei Discourse der Fall ist, verschiebt Disraptor die Diskussionsfunktionen auf vom App-Entwickler konfigurierbare Unterseiten und erlaubt es so auf der Startseite sowie beliebigen anderen Pfaden die eigene Web-App zu integrieren. Somit wird die erste Proof-of-Concept-Entwicklung von Disraptor mit vertretbarem Aufwand realisierbar und erhöht den Wiedererkennungswert für die späteren Nutzer so vorgestellter Apps.</p>
+    <p>Requests to the Discourse instance that match a Disraptor route are forwarded to the web application server. Disraptor uses the response and renders its content inside the Discourse instance. This way, Discourse’s forum is still available.</p>
+
+    <p><b>Status</b>: Early stages of development; no working prototype available.</p>
+
+    <p>For more information on how to use Disraptor, go to <a href="https://github.com/disraptor/disraptor">github.com/disraptor/disraptor</a>.</p>
 
   </main>
 
