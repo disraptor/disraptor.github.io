@@ -1,20 +1,41 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>disraptor</title>
-    <meta name="description" content="Web presence of Disraptor">
+  <title>Disraptor</title>
 
-    <!-- See https://goo.gl/OOhYW5 -->
+  <style>
+    html {
+      font-size: 1.25em;
+      line-height: 1.5;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    }
 
-    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    main {
+      max-width: 1000px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  </style>
+</head>
+<body>
 
-    <link rel="import" href="/src/disraptor-app/disraptor-app.html">
+  <main>
 
+    <a href="/"><h1>Disraptor</h1></a>
 
-  </head>
-  <body>
-    <disraptor-app></disraptor-app>
-  
+    <h2>Soziales Frontend für Schnelle Web-App-Entwicklung</h2>
 
-</body></html>
+    <p>Eine neue Web-App zu entwickeln beinhaltet zahlreiche Aufgaben, die meist nichts mit ihrer eigentlichen Funktion zu tun haben: Nutzermanagement, Authentisierung, Mailversand, soziales Netzwerk, Diskussionsforum, etc. Die Implementierung dieser Komponenten erfordert viel Zeit und lenkt vom eigentlichen Dienst ab. Das trifft insbesondere Einzelkämpfer und kleine Gruppen, die mit wenig Aufwand und Ressourcen etwas bewegen wollen, aber auch Start-ups in der Frühphase, die ihre App möglichst schnell veröffentlichen wollen. Überraschenderweise gibt es bislang kein Werkzeug, das die oben genannten Funktionen schlüsselfertig integriert, so dass man nur noch seine App einbauen muss. Disraptor füllt diese Lücke erstmals.</p>
+
+    <p>Disraptor implementiert ein "soziales Frontend" für Web-Apps. Sämtliches Nutzermanagement sowie Möglichkeiten für soziale Interaktionen der Nutzer untereinander werden von Disraptor bereitgestellt. Interaktion mit der App hingegen werden direkt an den App-Server im Backend weitergeleitet: Da die Nutzer vom Frontend bereits authentisiert wurden, muss die App solche Funktionen nicht mehr selbst implementieren, was die App-Entwicklung drastisch erleichtert. Disraptor entkoppelt die sozialen Funktionen sowie das Nutzermanagement vollkommen von der App.</p>
+
+    <p>Die sozialen Funktionen und das Nutzermanagement von Disraptor werden nicht von Grund auf neu entwickelt. Stattdessen baut Disraptor auf Discourse auf, einem von Jeff Atwood (dem Gründer von StackOverflow) ins Leben gerufenen Diskussionsforensoftware, die gegenwärtig großen Zulauf findet. Anstatt aber lediglich ein Forum anzubieten, wie es bei Discourse der Fall ist, verschiebt Disraptor die Diskussionsfunktionen auf vom App-Entwickler konfigurierbare Unterseiten und erlaubt es so auf der Startseite sowie beliebigen anderen Pfaden die eigene Web-App zu integrieren. Somit wird die erste Proof-of-Concept-Entwicklung von Disraptor mit vertretbarem Aufwand realisierbar und erhöht den Wiedererkennungswert für die späteren Nutzer so vorgestellter Apps.</p>
+
+  </main>
+
+</body>
+</html>

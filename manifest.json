@@ -1,7 +1,0 @@
-{
-  "name": "disraptor",
-  "short_name": "disraptor",
-  "description": "Web presence of Disraptor",
-  "start_url": "/",
-  "display": "standalone"
-}

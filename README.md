@@ -1,2 +1,1 @@
-# disraptor.github.io
-Web pages of Disratpor
+# disraptor.org
