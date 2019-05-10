@@ -19,6 +19,16 @@
       padding-right: 12px;
       padding-left: 12px;
     }
+
+    .nav {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+    }
+
+    .nav__item:not(:first-child) {
+      margin-left: 1em;
+    }
   </style>
 </head>
 <body>
@@ -26,6 +36,16 @@
   <main>
 
     <a href="/"><h1>Disraptor</h1></a>
+
+    <ul class="nav">
+      <li class="nav__item">
+        <a href="docs/">Documentation</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="https://github.com/disraptor/disraptor">GitHub</a>
+      </li>
+    </ul>
 
     <p>Disraptor is a <a href="https://www.discourse.org/">Discourse</a> plugin with the goal of separating web application development from the development of other, often crucial features like user management, authentication, mailing, social networking, etc.</p>
 
@@ -36,8 +56,6 @@
     <p>Requests to the Discourse instance that match a Disraptor route are forwarded to the web application server. Disraptor uses the response and renders its content inside the Discourse instance. This way, Discourse’s forum is still available.</p>
 
     <p><b>Status</b>: Early stages of development; no working prototype available.</p>
-
-    <p>For more information on how to use Disraptor, go to <a href="https://github.com/disraptor/disraptor">github.com/disraptor/disraptor</a>.</p>
 
   </main>
 
