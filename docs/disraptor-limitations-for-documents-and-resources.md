@@ -29,7 +29,6 @@ body {
   background-image: url("/img/tiled-background.jpg");
 }
 ```
-
 ### Explanation
 
 URL references in Disraptor documents and resources must either be absolute or root-relative. The correct context of file-relative URLs cannot be recovered; hence, they must be avoided.
@@ -97,3 +96,12 @@ Instead, prefix IDs, class names, and custom attributes.
 Stylesheets and scripts **must not** select or query DOM nodes outside of a Disraptor document. Following this limitation avoids styles from leaking from the Discourse document into the containing Disraptor document. It also avoids Disraptor accidentally selecting or querying DOM nodes by ID, class name or custom attribute that are part of the Discourse document.
 
 This limitation **may** be intentionally ignored **if** one wants to make use of Discourse functionality or styles (e.g. styling buttons the same way Discourse does).
+
+## Inline scripts must not be depending on external scripts
+
+Since Ember only injects Disraptors content into the Discourse context there is no real rendering of the embedded DOM-part. Because of that scripts inside the embedded website would not be executed. Disraptor solves this issue by extracting all of the scripts into the Discourse context where they get rendered later.
+
+This comes with the limitation, that the scripts are executed in the order they are ready to and cannot be deferred. Since inline scripts do not have to be downloaded before being executed they will (almost always) be executed before external scripts are. If, on the other hand, these inline scripts need functions which are defined in the external scripts, they will just throw an error instead of doing what they are supposed to. 
+
+Therefore Disraptor cannot guarantee for correctly rendering a website having these dependencies. A workaround is moving the part of an internal script, which contains the references to external scripts, into a external script itself and sourcing it after the initial external script. External scripts which are injected into a DOM will be executed in order of appearance, so this will resolve the issues but results in slightly longer website loading times.
+
