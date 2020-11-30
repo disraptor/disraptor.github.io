@@ -9,7 +9,8 @@ Disraptor can only operate reliably while imposing restrictions on its documents
 - [URL paths **must not** be file-relative](#url-paths-must-not-be-file-relative)
 - [HTML IDs, class names and custom attributes **should** be prefixed](#html-ids-class-names-and-custom-attributes-should-be-prefixed)
 - [Stylesheets and scripts **must not** select or query DOM nodes outside of a Disraptor document](#stylesheets-and-scripts-must-not-select-or-query-dom-nodes-outside-of-a-disraptor-document)
-
+- [Inline scripts must not be depending on external scripts](#inline-scripts-must-not-be-depending-on-external-scripts)
+- [Don't load jQuery twice](#dont-load-jquery-twice)
 
 
 ## URL paths must not be file-relative
@@ -105,3 +106,6 @@ This comes with the limitation, that the scripts are executed in the order they 
 
 Therefore Disraptor cannot guarantee for correctly rendering a website having these dependencies. A workaround is moving the part of an internal script, which contains the references to external scripts, into a external script itself and sourcing it after the initial external script. External scripts which are injected into a DOM will be executed in order of appearance, so this will resolve the issues but results in slightly longer website loading times.
 
+## Don't load jQuery twice
+This is rather a quicktip than a restriction. Since Discourse uses jQuery itself loading jQuery with your web application can overwrite that instance, since Disraptor-content is evaluated later.
+If these versions differ to much, there might be issues with Discourses functionality and unexpected behavior may occur. Therefore make sure you do not load jQuery anymore when using your web application in combination with Disraptor, since Discourse does this for you. With respect to back compatibility all of your code should still be intact.
