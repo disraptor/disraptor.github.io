@@ -11,7 +11,7 @@ Disraptor can only operate reliably while imposing restrictions on its documents
 - [Stylesheets and scripts **must not** select or query DOM nodes outside of a Disraptor document](#stylesheets-and-scripts-must-not-select-or-query-dom-nodes-outside-of-a-disraptor-document)
 - [Inline scripts **must not** be depending on external scripts](#inline-scripts-must-not-be-depending-on-external-scripts)
 - [Don't load jQuery twice](#dont-load-jquery-twice)
-
+- [Fontawesome icons](#fontawesome-icons)
 
 ## URL paths must not be file-relative
 
