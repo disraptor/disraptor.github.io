@@ -1,5 +1,5 @@
 # 4. Setup Disraptor
-&larr; [3. Deploy Discourse with Disraptor](/docs/deploy-discourse-with-disraptor.md)
+&larr; [3. Deploy Discourse with Disraptor](deploy-discourse-with-disraptor.md)
 
 ---
 
