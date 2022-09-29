@@ -2,6 +2,8 @@
 &larr; [1. What is Disraptor?](/docs/what-is-disraptor.md)<br/>
 &rarr; [3. Deploy Discourse with Disraptor](/docs/deploy-discourse-with-disraptor.md)
 
+---
+
 *(Closely following [discourse.org: Beginners Guide to Install Discourse on Ubuntu for Development](https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-ubuntu-for-development/14727))*
 
 1. Install the following packages:
