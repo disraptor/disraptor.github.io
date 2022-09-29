@@ -2,6 +2,8 @@
 &larr; [2. Setup a Discourse development environment (Ubuntu)]([/docs/what-is-disraptor.md](/docs/setup-a-discourse-development-environment-ubuntu.md))<br/>
 &rarr; [4. Setup Disraptor](/docs/setup-disraptor.md)
 
+---
+
 *(based on [discourse/discourse: INSTALL-cloud.md](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md) and [discourse/discourse_docker: README.md](https://github.com/discourse/discourse_docker/blob/master/README.md).)*
 
 This document describes how to deploy Discourse with Disraptor. You will need root access to a docker-compatible 64-bit Linux server. You will also need a mail server and a domain name.
