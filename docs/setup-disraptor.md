@@ -1,4 +1,7 @@
-# Setup Disraptor
+# 4. Setup Disraptor
+&larr; [3. Deploy Discourse with Disraptor](/docs/deploy-discourse-with-disraptor.md)
+
+---
 
 Before setting up Disraptor, you have to setup either a development ([Setup a Discourse development environment (Ubuntu)](setup-a-discourse-development-environment-ubuntu.md)) or a production environment ([Deploy Discourse with Disraptor](deploy-discourse-with-disraptor.md)).
 
