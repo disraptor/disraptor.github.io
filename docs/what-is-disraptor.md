@@ -1,6 +1,6 @@
 # 1. What is Disraptor?
 
-&rarr; [2. Setup a Discourse development environment (Ubuntu)](/docs/setup-a-discourse-development-environment-ubuntu.md)
+&rarr; [2. Setup a Discourse development environment (Ubuntu)](setup-a-discourse-development-environment-ubuntu.md)
 
 ---
 
