@@ -1,6 +1,6 @@
 # 2. Setup a Discourse development environment (Ubuntu)
-&larr; [1. What is Disraptor?](/docs/what-is-disraptor.md)<br/>
-&rarr; [3. Deploy Discourse with Disraptor](/docs/deploy-discourse-with-disraptor.md)
+&larr; [1. What is Disraptor?](what-is-disraptor.md)<br/>
+&rarr; [3. Deploy Discourse with Disraptor](deploy-discourse-with-disraptor.md)
 
 ---
 
