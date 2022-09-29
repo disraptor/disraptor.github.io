@@ -16,7 +16,7 @@ Disraptor uses Rails’ route syntax; thus, it’s possible to use [dynamic path
 
 ## Authentication
 
-Your web application can make use of Discourse’s own authentication infrastructure. If a user is logged in via Discourse, Disraptor sends an `X-Disraptor-User` header with their user name to your web application. Similarly, the `X-Disraptor-Groups` header contains a list of associated groups. For now, only groups with the prefix `disraptor` are sent.
+Your web application can make use of Discourse’s own authentication infrastructure. If a user is logged in via Discourse, Disraptor sends an `X-Disraptor-User` header with their user name to your web application. Similarly, the `X-Disraptor-Groups` header contains a list of associated groups.
 
 Since Disraptor will only populate these header fields if there is any information to send, you can use the presence of the `X-Disraptor-User` header as the signal that the user is logged in.
 
@@ -32,7 +32,7 @@ Disraptor requires a secret key in order to communicate with your web applicatio
 
 ## Rendering modes
 
-Disraptor has two rendering modes for HTML. The current default mode is the legacy mode. The shadow DOM mode can be enabled in the Discourse settings under “disraptor shadow dom”.
+Disraptor has two rendering modes for HTML. The current default mode is the legacy mode. The shadow DOM mode can be enabled in the Discourse settings under “disraptor shadow dom”. Be aware, that the shadow DOM mode has yet to be tested in a live environment.
 
 ### Legacy mode
 
