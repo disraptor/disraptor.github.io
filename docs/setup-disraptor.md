@@ -16,5 +16,6 @@ After setting up a working development or production environment for Discourse a
 2. Open Discourse’s “Plugins” page. From there, open the Disraptor plugin page.
 
    Configure all routes that your web application needs to expose. You can use Rails’ route syntax to configure wildcard routes like `/static/*wildcard`. See Rails’ documentation on [dynamic path segments](https://guides.rubyonrails.org/routing.html#dynamic-segments) and [wildcard path segments](https://guides.rubyonrails.org/routing.html#route-globbing-and-wildcard-segments) for more examples.
+   Be aware that Rails can act inconsistent with the new routes right after adding it. Usually it is best to restart the Rails server after adding new routes.
 
 Any Disraptor application is subject to a set of limitations that are necessary for Discourse and Disraptor to interact nicely: [Limitations for Disraptor documents and resources](disraptor-limitations-for-documents-and-resources.md)
