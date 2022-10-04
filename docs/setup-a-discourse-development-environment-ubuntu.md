@@ -36,7 +36,7 @@
    d/rails s
    ```
 
-And done! You should be able to connect to https://127.0.0.1:4200/ now and see the Discourse setup wizard.
+And done! You should be able to connect to [https://127.0.0.1:4200/](https://127.0.0.1:4200/) now and see the Discourse setup wizard.
 
 **NOTE:** Since Discourse and Disraptor run in a docker container now your web it cannot see your web application by default since it is not yet using the host network but rather the docker internal network.
 To fix this you can change the `docker run` command at the bottom of the `d/boot_dev` script to include the `--network="host"` flag.
