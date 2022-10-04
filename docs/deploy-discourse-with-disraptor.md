@@ -21,18 +21,19 @@ This document describes how to deploy Discourse with Disraptor. You will need ro
 2. Connect to the server via SSH.
 3. Install the following software on the server:
 
-   - [Ruby 2.5+](https://www.ruby-lang.org/en/downloads/)
-   - [Postgres 10+](https://www.postgresql.org/download/)
-   - [Redis 2.6+](https://redis.io/download)
+   - [Ruby 2.7+](https://www.ruby-lang.org/en/downloads/)
+   - [Postgres 14+](https://www.postgresql.org/download/)
+   - [Redis 7.0+](https://redis.io/download)
 
      ```sh
-     sudo apt install redis-server
+     sudo apt install redis-server ruby postgresql
      ```
+   **Note:** This might work with older versions aswell. If you cannot get a hand on these easily try to make it work with what you have first.
 
    - Docker and git:
 
      ```sh
-     wget -qO- https://get.docker.com/ | sh
+     sudo apt install docker.io git
      ```
 
 
