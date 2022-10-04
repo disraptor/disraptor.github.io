@@ -24,7 +24,7 @@
    cd discourse/plugins
    ln -s ../../disraptor disraptor
    ```
-5. Boot up the development container
+5. Boot up the development container. Keep an eye on the terminal. It will try to create an account for the forums for you and will ask for E-Mail and password.
    ```sh
    cd  ..
    d/boot_dev --init
