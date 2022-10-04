@@ -4,6 +4,45 @@
 
 ---
 
+## Inside Docker (preferred)
+1. Install docker and postresql
+   ```sh
+   sudo apt update
+   sudo apt install docker postgresql
+   ```
+2. Add yourself to the docker group
+   ```sh
+   sudo usermod -aG docker $USER
+   ```
+3. Clone the Discourse and Disraptor git repositories
+   ```sh 
+   git clone https://github.com/discourse/discourse.git
+   git clone https://github.com/disraptor/disraptor.git
+   ```
+4. Link the Disraptor plugin into Discourse
+   ```sh
+   cd discourse/plugins
+   ln -s ../../disraptor disraptor
+   ```
+5. Boot up the development container
+   ```sh
+   cd  ..
+   d/boot_dev --init
+   ```
+   the `--init` flag is only needed for setting up. Whenever you have to use `boot_dev` again you may use the command without that flag.
+6. Start the Ember CLI and the Rails server in **2 separate terminals**
+   ```sh
+   d/ember_cli
+   d/rails s
+   ```
+
+And done! You should be able to connect to https://127.0.0.1:4200/ now and see the Discourse setup wizard.
+
+**NOTE:** Since Discourse and Disraptor run in a docker container now your web it cannot see your web application by default since it is not yet using the host network but rather the docker internal network.
+To fix this you can change the `docker run` command at the bottom of the `d/boot_dev` script to include the `--network="host"` flag.
+
+## Local installation
+
 *(Closely following [discourse.org: Beginners Guide to Install Discourse on Ubuntu for Development](https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-ubuntu-for-development/14727))*
 
 1. Install the following packages:
